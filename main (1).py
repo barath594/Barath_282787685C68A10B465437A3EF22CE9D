@@ -1,24 +1,16 @@
-# 2.2Implement a class called Player that represents a cricket player. The Player class should have a method called play() which prints "The player is playing cricket. Derive two classes, Batsman and Bowler, from the Player class. Override the play() method in each derived class to print "The batsman is batting" and "The bowler is bowling", respectively. Write a program to create objects of both the Batsman and Bowler classes and call the play() method for each object.
-class Player:
+# 1.2 Write a program that determines whether a year entered by the user is a leap year or not using ifelif-else statements.
 
-  def play(self):
-    print("The player is playing cricket.")
-
-
-class Batsman(Player):
-
-  def play(self):
-    print("The batsman is batting.")
-
-
-class Bowler(Player):
-
-  def play(self):
-    print("The bowler is bowling.")
-
-
-batsman = Batsman()
-bowler = Bowler()
-
-batsman.play()
-bowler.play()
+def isLeapYear(year):  
+  
+  if((year % 400 == 0) or  
+     (year % 100 != 0) and  
+     (year % 4 == 0)):  
+    return True
+  else:
+    return False
+    
+year=2020
+if isLeapYear(year):
+    print("{} is a leap Year". format (year))  
+else:  
+    print ("{} is not a leap Year". format (year))
